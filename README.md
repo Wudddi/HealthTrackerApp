@@ -10,7 +10,8 @@ HealthTrackerApp is a mobile application developed using the Angular framework a
 - **Interactive Random Food**: Shake the phone to get random food suggestions.
 - **User-Friendly Interface**: Simple and intuitive UI with Bootstrap for a visually appealing design.
 - **Photo Functionality**: Capture photos or upload from the library to associate with food and drink items.
-
+- **Location Tracking**: Automatically record the location when adding a daily record.
+  
 ## Screenshots
 
 ### All Records
@@ -39,6 +40,9 @@ HealthTrackerApp is a mobile application developed using the Angular framework a
 
 ### Add Location and Food/Drink
 ![Add Location and Food/Drink](screenshots/add_location_and_food_drink.png)
+
+### Add Daily Record with Location
+![Add Daily Record with Location](screenshots/add_daily_record_with_location.png)
 
 ## Development
 
