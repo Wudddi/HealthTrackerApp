@@ -44,6 +44,12 @@ HealthTrackerApp is a mobile application developed using the Angular framework a
 ### Add Daily Record with Location
 ![Add Daily Record with Location](screenshots/add_daily_record_with_location.png)
 
+## APK Download
+
+You can download the APK file for the HealthTrackerApp and install it on your Android device:
+
+[Download HealthTrackerApp APK](path_to_your_apk_file/app-debug.apk)
+
 ## Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
