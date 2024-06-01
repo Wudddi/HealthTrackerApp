@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h2>All Record</h2>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let record of records; let i = index" class="list-group-item">
+        <div class="row">
+          <div class="col-md-3">
+            <h5>Date</h5>
+            <p>{{ record.date | date: 'mediumDate' }}</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Weight</h5>
+            <p>{{ record.weight }} kg</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Calories</h5>
+            <p>{{ record.totalCalories }} kcal</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Water Intake</h5>
+            <p>{{ record.totalMilliliters }} ml</p>
+          </div>
+        </div>
+        <div class="text-right mt-2">
+          <button class="btn btn-outline-danger mr-2" (click)="onDeleteClick(record)">Delete</button>
+          <button class="btn btn-outline-secondary" (click)="onModifyClick(record)">Modify</button>
+        </div>
+      </li>
+    </ul>
+    <div class="card-footer text-muted">
+      <div class="text-center">
+        Total Records: {{ records.length }}
+      </div>
+    </div>
+  </div>
+</div>

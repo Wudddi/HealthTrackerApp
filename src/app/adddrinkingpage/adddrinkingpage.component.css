@@ -1,0 +1,37 @@
+.preview-container {
+  text-align: center;
+}
+
+.img-preview {
+  max-width: 100%;
+  max-height: 200px; /* Adjust this value as needed */
+}
+
+.card-header {
+  font-size: 1.5rem; /* Larger text for the header */
+}
+
+.card-footer pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0.25rem;
+  max-height: 200px;
+  overflow: auto;
+}
+
+/* Optional: Adjust button styles */
+button.btn {
+  margin-top: 0.5rem;
+}
+
+/* Style improvements for form inputs */
+input[type="text"],
+input[type="number"] {
+  height: calc(2.25rem + 2px);
+  font-size: 1rem;
+}
+
+/* Hide the default input image and only show the preview image */
+input[type="image"] {
+  display: none;
+}

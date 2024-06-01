@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="card my-5">
+    <div class="card-header text-center bg-primary text-white">
+      <h1>Add a Food Item</h1>
+    </div>
+    <div class="card-body">
+      <form #foodForm="ngForm">
+        <div class="mb-3">
+          <label for="txtName" class="form-label">Name</label>
+          <input type="text" id="txtName" class="form-control" name="txtName" [(ngModel)]="food.name" #name="ngModel"
+                 required [minlength]="MIN_LENGTH" [maxlength]="MAX_LENGTH">
+          @if (name.invalid && (name.touched || name.dirty)) {
+            @if (name.errors?.["required"]) {
+              <small class="text-danger">Name is required</small><br>
+            }
+            @if (name.errors?.["minlength"]) {
+              <small class="text-danger">Name must have at least {{ MIN_LENGTH }} </small><br>
+            }
+            @if (name.errors?.["maxlength"]) {
+              <small class="text-danger">Name must have at less than {{ MAX_LENGTH }} chars</small><br>
+            }
+          }
+        </div>
+        <div class="mb-3">
+          <label for="txtCalories" class="form-label">Calories per 100g</label>
+          <input type="number" id="txtCalories" class="form-control" name="txtCalories"
+                 [(ngModel)]="food.caloriesPerHundredGrams" #calories="ngModel" required max="{{MAX_CALORIES}}}" min="0">
+          @if (calories.invalid && (calories.touched || calories.dirty)) {
+            @if (calories.errors?.["required"]) {
+              <small class="text-danger">Calories is required</small><br>
+            }
+            @if (calories.errors?.["max"]) {
+              <small class="text-danger">Calories cannot be more than 2500.</small><br>
+            }
+            @if (calories.errors?.["min"]) {
+              <small class="text-danger">Calories cannot be less than 0.</small><br>
+            }
+          }
+        </div>
+        <div class="mb-4">
+          <label for="foodPhoto" class="form-label">Photo</label>
+          <div class="preview-container mb-3">
+            <img id="foodPhoto" [src]="imgsrc" class="img-preview" *ngIf="imgsrc">
+          </div>
+          <button class="btn btn-outline-secondary w-100 mb-2" type="button" id="btnTakePhoto"
+                  (click)="onCapturePhotoClick()">Take Photo
+          </button>
+          <button class="btn btn-outline-secondary w-100" type="button" id="btnLoadPhoto"
+                  (click)="onLoadFromLibraryClick()">Load from Library
+          </button>
+        </div>
+
+        <button type="submit" id="btnAdd" class="btn btn-success w-100" (click)="onAddClick()"
+                [disabled]="!food.photo || !foodForm.valid">
+          <span class="button_text">Add Item</span>
+        </button>
+      </form>
+    </div>
+    <div class="card-footer">
+      <div class="footer-content">
+        <div class="summary">
+          Calories per gram: {{ food.caloriesPerHundredGrams / 100 }}
+          <br>
+          To kilojoules per Hundred Grams : {{ (food.caloriesPerHundredGrams * 4.184).toFixed(2) }}
+          <br>
+          1000 kilojoules =238.9 calories
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

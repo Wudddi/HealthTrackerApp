@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header text-center bg-primary text-white">
+      <h1>All Drinking</h1>
+    </div>
+    <div class="card-body p-0">
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let drinking of drinkings" class="list-group-item">
+          <div class="d-flex flex-row align-items-center">
+            <img [src]="drinking.photo" class="food-image mr-2" alt="Food image">
+            <div class="flex-fill">
+              <div class="food-name">{{ drinking.name }}</div>
+              <div class="food-calories">{{ drinking.milliliters }} ml</div>
+            </div>
+            <div class="ml-auto">
+              <button type="button" class="btn btn-success btn-sm mr-1" (click)="onModifyClick(drinking)">Modify</button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteClick(drinking)">Delete</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div *ngIf="drinkings.length === 0" class="text-center py-5">
+        <h3>No Drinking found</h3>
+      </div>
+    </div>
+  </div>
+</div>

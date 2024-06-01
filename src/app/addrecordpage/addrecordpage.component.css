@@ -1,0 +1,83 @@
+.food-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.food-image-container {
+  flex: 0 0 auto; /* Do not grow or shrink */
+  padding: 0.5em;
+}
+
+.food-image {
+  max-width: 100px; /* Adjust the size as necessary */
+  height: auto;
+}
+
+.food-details {
+  flex-grow: 1;
+  padding-left: 1em;
+}
+
+.food-name {
+  font-weight: bold;
+}
+
+.food-calories {
+  display: block; /* Make it a block to appear on a new line */
+  color: #555;
+}
+
+.grams-input {
+  margin: 0.5em 0;
+}
+
+.add-button {
+  margin-top: 0.5em;
+}
+.drinking-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+}
+
+.drinking-image-container {
+  flex: 0 0 auto;
+  padding: 0.5em;
+  margin-right: 1em;
+}
+
+.drinking-image {
+  max-width: 80px; /* Adjust the size as necessary */
+  height: auto;
+}
+
+.drinking-details {
+  flex-grow: 1;
+}
+
+.drinking-name {
+  font-weight: bold;
+  display: block; /* Ensures name is on its own line */
+}
+
+.drinking-volume {
+  display: block; /* Ensures volume is on its own line */
+  color: #555;
+  margin-bottom: 0.5em;
+}
+
+.add-drinking-button {
+  padding: 0.5em 1em;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.add-drinking-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

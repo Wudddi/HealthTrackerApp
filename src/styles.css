@@ -1,0 +1,49 @@
+nav.navbar {
+  background-color: #f8f9fa; /* Light gray background, adjust if you need another color */
+}
+
+.nav-pills .nav-item .nav-link {
+  color: black; /* Warm blue color for icons and text */
+}
+
+.nav-pills .nav-item .nav-link.active,
+.nav-pills .nav-item .nav-link.active span {
+  color: #ff5722; /* Warm orange color for the active state */
+  background-color: #ffd19a; /* Light warm background for the active state; adjust as desired */
+}
+
+/* Style for the icons specifically, if needed */
+.nav-pills .nav-item .nav-link span {
+  color: inherit; /* Ensures the icons inherit the color from the parent link */
+}
+
+/* Style for the main action button */
+.nav-pills .nav-item .btn-primary {
+  background-color: #28ee28; /* Warm blue color for the button */
+  border: none; /* Remove border */
+  /* Add a box-shadow if desired for a "lifted" effect */
+  box-shadow: 0px 3px 6px rgba(215, 0, 0, 0.3);
+}
+
+/* Ensure text is centered under icons */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust the alignment and sizing of the floating action button */
+.nav-item .nav-link {
+  position: relative; /* This is to position the action button correctly */
+}
+
+.nav-item .btn-rounded {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -25px; /* Half the height to make it centered vertically */
+  left: 50%;
+  transform: translateX(-50%);
+}

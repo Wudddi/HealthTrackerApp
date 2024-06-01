@@ -1,0 +1,34 @@
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <ul class="nav nav-pills w-100">
+    <li class="nav-item flex-grow-1 text-center">
+      <a class="nav-link" routerLink="/record" routerLinkActive="active">
+        <span class="fa fa-clipboard-list"></span>
+        <small class="d-block">Record</small>
+      </a>
+    </li>
+    <li class="nav-item flex-grow-1 text-center">
+      <a class="nav-link" routerLink="/food" routerLinkActive="active">
+        <span class="fa fa-utensils"></span>
+        <small class="d-block">Food</small>
+      </a>
+    </li>
+    <li class="nav-item">
+        <button class="btn btn-primary rounded-circle"  (click)="toggleOverlay()">
+          <i class="fas fa-plus"></i>
+        </button>
+      <app-modal [showOverlay]="isOverlayVisible"></app-modal>
+    </li>
+    <li class="nav-item flex-grow-1 text-center">
+      <a class="nav-link" routerLink="/drinking" routerLinkActive="active">
+        <span class="fa fa-glass-whiskey"></span>
+        <small class="d-block">Drinking</small>
+      </a>
+    </li>
+    <li class="nav-item flex-grow-1 text-center">
+      <a class="nav-link" routerLink="/random" routerLinkActive="active">
+        <span class="fa fa-random"></span>
+        <small class="d-block">Random</small>
+      </a>
+    </li>
+  </ul>
+</nav>

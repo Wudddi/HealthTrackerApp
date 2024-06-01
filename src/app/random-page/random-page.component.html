@@ -1,0 +1,15 @@
+
+<div *ngIf="!isShaking" class="card-container">
+  <h4>Shaking your phone to get random food !</h4>
+</div>
+<div *ngIf="isShaking" class="card-container">
+  <div class="card">
+    <div class="card-img"><img [src]="food.photo" class="img-preview" *ngIf="food.photo"></div>
+    <div class="card-info">
+      <h1 class="text-title">{{food.name}}</h1>
+    </div>
+    <div class="card-footer">
+      <span class="text-title">{{ food.caloriesPerHundredGrams }} calories/100g</span>
+    </div>
+  </div>
+</div>

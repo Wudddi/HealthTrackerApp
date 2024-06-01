@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: #eaeaea;
+  border-radius: 20px 20px 20px 20px; /* Rounded corners at the top */
+  padding: 20px;
+  width: 90%; /* Or the width you prefer */
+  max-width: 500px; /* Maximum width */
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.action-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #b4b2b2;
+  cursor: pointer;
+}
+

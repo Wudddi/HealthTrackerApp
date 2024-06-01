@@ -1,0 +1,54 @@
+.card-header {
+  background-color: #007bff; /* Bootstrap primary color */
+}
+
+.food-image {
+  width: 60px; /* Adjusted for mobile */
+  height: 60px; /* Adjusted for mobile */
+  object-fit: cover; /* Cover fit for images */
+  border-radius: 50%; /* Circular images */
+}
+
+.food-name {
+  font-weight: bold;
+}
+
+.food-calories {
+  font-size: 0.8rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.btn-success,
+.btn-danger {
+  margin-bottom: 0.25rem;
+}
+
+.card {
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .food-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn-sm {
+    font-size: 0.875rem;
+  }
+}
+
+.container.mt-4 {
+  margin-bottom: 4rem;
+}

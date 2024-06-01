@@ -1,0 +1,18 @@
+<div class="overlay" *ngIf="showOverlay">
+  <div class="popup">
+    <div class="popup-header">
+      <button class="close-btn" (click)="closeOverlay()">&times;</button>
+    </div>
+    <div class="popup-content">
+      <a class="nav-link" routerLink="/addRecord">
+        <button class="action-btn">Add Record</button>
+      </a>
+      <a class="nav-link" routerLink="/addFood">
+        <button class="action-btn">Add Food</button>
+      </a>
+      <a class="nav-link" routerLink="/addDrinking">
+        <button class="action-btn">Add Drinking</button>
+      </a>
+    </div>
+  </div>
+</div>
