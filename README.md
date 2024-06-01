@@ -48,7 +48,7 @@ HealthTrackerApp is a mobile application developed using the Angular framework a
 
 You can download the APK file for the HealthTrackerApp and install it on your Android device:
 
-[Download HealthTrackerApp APK](/app-debug.apk)
+[Download HealthTrackerApp APK](app-debug.apk)
 
 ## Development
 
